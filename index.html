@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/7951bd2be7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <section class="navigation">
+        <div class="navbar" id="navib">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" />
+                </a>
+                <ul class="options">
+                    <li><a href="#home" class="active" href="javascript:void(0)"><i class="fas fa-home"
+                                style="display: inline; float: left; margin: 13px 3px auto;"></i>Home</a>
+                    </li>
+                    <li><a href="#about" href="javascript:void(0)"><i class="fas fa-pen"
+                                style="display: inline; float: left; margin: 13px 3px auto;"></i>My Projects</a></li>
+                    <li><a href="#team" href="javascript:void(0)"><i class="fas fa-users"
+                                style="display: inline; float: left; margin: 13px 3px auto;"></i>Starred Projects</a></li>
+                    <!-- <li><a href="#contact" href="javascript:void(0)"><i class="fas fa-envelope"
+                                style="display: inline; float: left; margin: 13px 3px auto;"></i>Logout</a></li> -->
+                    <!-- <li><a href="#signup"><i class="fas fa-user-plus"></i>Sign Up</a></li> -->
+                    <li><a href="#sign-out" href="javascript:void(0)"><i class="fas fa-sign-out-alt"  style="display: inline; float: left; margin: 13px 3px auto;"></i></a></li>
+                    <!-- <li><i class="fas fa-user-plus"></i></li> -->
+                </ul>
+                <img src="images/brave.png" class="user-pic" onclick="toggleMenu()">
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="images/brave.png">
+                            <h2>Sarthak Deshmukh</h2>
+                        </div>
+                        <hr>
+                        <a href="#" class="sub-menu-link">
+                            <img src="images/profile.png">
+                            <p>View Profile</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="images/setting.png">
+                            <p>Settings</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="images/help.png">
+                            <p>Help & Support</p>
+                            <span>></span>
+                        </a>
+                        <a href="#" class="sub-menu-link">
+                            <img src="images/logout.png">
+                            <p>Logout</p>
+                            <span>></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section class="homepage">
+        <div class="left">
+            <div class="search">
+                <h2>Project Technology Stack</h2>
+                <div class="select-box">
+                    <div class="options-container">
+                        <div class="option">
+                            <input type="radio" class="radio" id="automobiles" name="category" />
+                            <label for="html">HTML</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="film" name="category" />
+                            <label for="css">CSS</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="science" name="category" />
+                            <label for="js">Javascript</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="art" name="category" />
+                            <label for="react">React</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="music" name="category" />
+                            <label for="mongo">MongoDB</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="travel" name="category" />
+                            <label for="blockchain">Blockchain</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="sports" name="category" />
+                            <label for="dl">Deep Learning</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="news" name="category" />
+                            <label for="ml">Machine Learning</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="tutorials" name="category" />
+                            <label for="iot">IoT</label>
+                        </div>
+                    </div>
+
+                     <div class="selected">
+                         Select the technology
+                     </div>
+
+                     <div class="search-box">
+                        <input type="text" placeholder="Start Typing..." />
+                     </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+        <div class="right">
+            <div class="card">
+                <div class="float-layout">
+                    <a href="info.html">
+                    <div class="pro-img">
+                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
+                        <div class="project">
+                            <div class="project-title">Project title</div>
+                            <div class="project-desc">Project Contributor's name and a small description about project.
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="float-layout">
+                    <div class="pro-img">
+                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
+                        <div class="project">
+                            <div class="project-title">Project title</div>
+                            <div class="project-desc">Project Contributor's name and a small description about project.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="float-layout">
+                    <div class="pro-img">
+                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
+                        <div class="project">
+                            <div class="project-title">Project title</div>
+                            <div class="project-desc">Project Contributor's name and a small description about project.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="float-layout">
+                    <div class="pro-img">
+                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
+                        <div class="project">
+                            <div class="project-title">Project title</div>
+                            <div class="project-desc">Project Contributor's name and a small description about project.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="float-layout">
+                    <div class="pro-img">
+                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
+                        <div class="project">
+                            <div class="project-title">Project title</div>
+                            <div class="project-desc">Project Contributor's name and a small description about project.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <div class="card">
+                <div class="float-layout">
+                    <div class="pro-img">
+                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
+                        <div class="project">
+                            <div class="project-title">Project title</div>
+                            <div class="project-desc">Project Contributor's name and a small description about project.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> -->
+        </div>
+    </section> 
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
