@@ -9,8 +9,18 @@
     <title>Miniproject</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/7951bd2be7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="multi-input.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 </head>
 
 <body>
@@ -22,19 +32,19 @@
                 </a>
                 <ul class="options">
                     <li><a href="#home" class="active" href="javascript:void(0)"><i class="fas fa-home"
-                                style="display: inline; float: left; margin: 13px 3px auto;"></i>Home</a>
+                                style="display: inline; margin: 8px 3px auto; "></i>Home</a>
                     </li>
                     <li><a href="#about" href="javascript:void(0)"><i class="fas fa-pen"
-                                style="display: inline; float: left; margin: 13px 3px auto;"></i>My Projects</a></li>
-                    <li><a href="#team" href="javascript:void(0)"><i class="fas fa-users"
-                                style="display: inline; float: left; margin: 13px 3px auto;"></i>Starred Projects</a></li>
+                                style="display: inline; margin: 8px 3px auto;"></i>My Projects</a></li>
+                    <li><a href="form.html" href="javascript:void(0)"><i class="fas fa-users"
+                                style="display: inline; margin: 8px 3px auto;"></i>Upload a Project</a></li>
                     <!-- <li><a href="#contact" href="javascript:void(0)"><i class="fas fa-envelope"
                                 style="display: inline; float: left; margin: 13px 3px auto;"></i>Logout</a></li> -->
                     <!-- <li><a href="#signup"><i class="fas fa-user-plus"></i>Sign Up</a></li> -->
-                    <li><a href="#sign-out" href="javascript:void(0)"><i class="fas fa-sign-out-alt"  style="display: inline; float: left; margin: 13px 3px auto;"></i></a></li>
+                    <!-- <li><a href="form.html" href="javascript:void(0)"><i class="fas fa-sign-out-alt"  style="display: inline; float: left; margin: 13px 3px auto;"></i></a></li> -->
                     <!-- <li><i class="fas fa-user-plus"></i></li> -->
+                    <img src="images/brave.png" class="user-pic" onclick="toggleMenu()" style="margin-right: 40px;">
                 </ul>
-                <img src="images/brave.png" class="user-pic" onclick="toggleMenu()">
                 <div class="sub-menu-wrap" id="subMenu">
                     <div class="sub-menu">
                         <div class="user-info">
@@ -67,59 +77,82 @@
             </nav>
         </div>
     </section>
+    <div class="homedata">
+        <div class="col-1">
+            <h1>Platform to showcase your projects</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse temporibus voluptatem laboriosam asperiores voluptatum nesciunt ipsa dolorem natus non ducimus.</p>
+            <a class="expbutton" href="#">Upload a Project </a>
+        </div>
+        <div class="col-2">
+            <img src="images/backg2.png">
+        </div>
+    </div>
     <section class="homepage">
         <div class="left">
-            <div class="search">
+            <div style="margin-left: 50px; padding:10px;" class="container">
+                <h1>Search projects efficiently</h1>
+                <div class="techsearch">
+                    <div class="row" >
+                        <div class="data-col-md-8" style= "width:350px; margin-right: 10px;">
+                            <input class="prompt" id="xyz" type="text" placeholder="Search countries..." style="width: 90px;">
+                        </div>
+                        <div class="col-md-4">
+                            <a onclick="btn_handler()" class="button btn btn-secondary">Search Projects</a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!-- <div class="search">
                 <h2>Project Technology Stack</h2>
                 <div class="select-box">
                     <div class="options-container">
                         <div class="option">
-                            <input type="radio" class="radio" id="automobiles" name="category" />
+                            <input type="radio" class="radio" id="html name="category" />
                             <label for="html">HTML</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="film" name="category" />
+                            <input type="radio" class="radio" id="css" name="category" />
                             <label for="css">CSS</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="science" name="category" />
+                            <input type="radio" class="radio" id="js" name="category" />
                             <label for="js">Javascript</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="art" name="category" />
+                            <input type="radio" class="radio" id="react" name="category" />
                             <label for="react">React</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="music" name="category" />
+                            <input type="radio" class="radio" id="mongo" name="category" />
                             <label for="mongo">MongoDB</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="travel" name="category" />
+                            <input type="radio" class="radio" id="blockchain" name="category" />
                             <label for="blockchain">Blockchain</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="sports" name="category" />
+                            <input type="radio" class="radio" id="dl" name="category" />
                             <label for="dl">Deep Learning</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="news" name="category" />
+                            <input type="radio" class="radio" id="ml" name="category" />
                             <label for="ml">Machine Learning</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="tutorials" name="category" />
+                            <input type="radio" class="radio" id="iot" name="category" />
                             <label for="iot">IoT</label>
                         </div>
 
                         <div class="option">
-                            <input type="radio" class="radio" id="tutorials" name="category" />
+                            <input type="radio" class="radio" id="ai" name="category" />
                             <label for="iot">AI</label>
                         </div>
                     </div>
@@ -132,7 +165,7 @@
                         <input type="text" placeholder="Start Typing..." />
                      </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
         </div>
@@ -140,26 +173,14 @@
         <div class="right">
             <div class="card">
                 <div class="float-layout">
-                    <a href="info.html">
                     <div class="pro-img">
                         <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
                         <div class="project">
                             <div class="project-title">Project title</div>
                             <div class="project-desc">Project Contributor's name and a small description about project.
                             </div>
-                        </div>
-                    </div>
-                </a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="float-layout">
-                    <div class="pro-img">
-                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
-                        <div class="project">
-                            <div class="project-title">Project title</div>
-                            <div class="project-desc">Project Contributor's name and a small description about project.
+                            <div class="col-md-4">
+                                <a href="info.html" class="btn btn-warning">View Project</a>
                             </div>
                         </div>
                     </div>
@@ -174,6 +195,9 @@
                             <div class="project-title">Project title</div>
                             <div class="project-desc">Project Contributor's name and a small description about project.
                             </div>
+                            <div class="col-md-4">
+                                <a href="info.html" class="btn btn-warning">View Project</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,6 +210,25 @@
                         <div class="project">
                             <div class="project-title">Project title</div>
                             <div class="project-desc">Project Contributor's name and a small description about project.
+                            </div>
+                            <div class="col-md-4">
+                                <a href="info.html" class="btn btn-warning">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="float-layout">
+                    <div class="pro-img">
+                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
+                        <div class="project">
+                            <div class="project-title">Project title</div>
+                            <div class="project-desc">Project Contributor's name and a small description about project.
+                            </div>
+                            <div class="col-md-4">
+                                <a href="info.html" class="btn btn-warning">View Project</a>
                             </div>
                         </div>
                     </div>
@@ -201,12 +244,24 @@
                             <div class="project-title">Project title</div>
                             <div class="project-desc">Project Contributor's name and a small description about project.
                             </div>
+                            <div class="col-md-4">
+                                <a href="info.html" class="btn btn-warning" >View Project</a>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-
+            
+            <div class="pages">
+                <ul class="pagination pagination-lg">
+                  <li><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                </ul>
+              </div>
             <!-- <div class="card">
                 <div class="float-layout">
                     <div class="pro-img">
@@ -224,6 +279,49 @@
     </section> 
 
     <script src="index.js"></script>
+    <script>
+        var content = [
+            {id: 0, text: "HTML"},
+            {id: 1, text: "CSS"},
+            {id: 2, text: "Javascript"},
+            {id: 3, text: "React"},
+            {id: 4, text: "Flutter"},
+            {id: 5, text: "Deep Learning"},
+            {id: 6, text: "Machine Learning"},
+            {id: 7, text: "Blockchain"},
+            {id: 8, text: "IoT"},
+
+        ];
+    
+    
+         $(".prompt").select2({
+             data:content,
+             // minimumInputLength: 2,
+             width: '100%',
+             multiple:true,
+             placeholder:"Enter Technology Name",
+             // templateResult:formatState
+    
+         });
+    
+    
+    
+        // function btn_handler() {
+        //     var names = $('.prompt').select2('data');
+            
+        //     for(let name of names){
+                
+        //         console.log(name)
+        //         console.log(name.text)
+        //         console.log(name.email)
+                
+        //         alert(`${name.text} - ${name.email}`)
+    
+        //     }
+        // }
+    
+    </script>
+    
 
 </body>
 
