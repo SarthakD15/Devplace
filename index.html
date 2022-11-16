@@ -2,326 +2,193 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miniproject</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/7951bd2be7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="multi-input.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="multi-select-tag.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miniproject</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/7951bd2be7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="multi-input.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section class="navigation">
-        <div class="navbar" id="navib">
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="images/logo.jpg" />
-                </a>
-                <ul class="options">
-                    <li><a href="#home" class="active" href="javascript:void(0)"><i class="fas fa-home"
-                                style="display: inline; margin: 8px 3px auto; "></i>Home</a>
-                    </li>
-                    <li><a href="#about" href="javascript:void(0)"><i class="fas fa-pen"
-                                style="display: inline; margin: 8px 3px auto;"></i>My Projects</a></li>
-                    <li><a href="form.html" href="javascript:void(0)"><i class="fas fa-users"
-                                style="display: inline; margin: 8px 3px auto;"></i>Upload a Project</a></li>
-                    <!-- <li><a href="#contact" href="javascript:void(0)"><i class="fas fa-envelope"
-                                style="display: inline; float: left; margin: 13px 3px auto;"></i>Logout</a></li> -->
-                    <!-- <li><a href="#signup"><i class="fas fa-user-plus"></i>Sign Up</a></li> -->
-                    <!-- <li><a href="form.html" href="javascript:void(0)"><i class="fas fa-sign-out-alt"  style="display: inline; float: left; margin: 13px 3px auto;"></i></a></li> -->
-                    <!-- <li><i class="fas fa-user-plus"></i></li> -->
-                    <img src="images/brave.png" class="user-pic" onclick="toggleMenu()" style="margin-right: 40px;">
-                </ul>
-                <div class="sub-menu-wrap" id="subMenu">
-                    <div class="sub-menu">
-                        <div class="user-info">
-                            <img src="images/brave.png">
-                            <h2>Sarthak Deshmukh</h2>
-                        </div>
-                        <hr>
-                        <a href="#" class="sub-menu-link">
-                            <img src="images/profile.png">
-                            <p>View Profile</p>
-                            <span>></span>
-                        </a>
-                        <a href="#" class="sub-menu-link">
-                            <img src="images/setting.png">
-                            <p>Settings</p>
-                            <span>></span>
-                        </a>
-                        <a href="#" class="sub-menu-link">
-                            <img src="images/help.png">
-                            <p>Help & Support</p>
-                            <span>></span>
-                        </a>
-                        <a href="#" class="sub-menu-link">
-                            <img src="images/logout.png">
-                            <p>Logout</p>
-                            <span>></span>
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </section>
-    <div class="homedata">
-        <div class="col-1">
-            <h1>Platform to showcase your projects</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse temporibus voluptatem laboriosam asperiores voluptatum nesciunt ipsa dolorem natus non ducimus.</p>
-            <a class="expbutton" href="#">Upload a Project </a>
-        </div>
-        <div class="col-2">
-            <img src="images/backg2.png">
-        </div>
+  <section class="navigation">
+    <div class="navbar" id="navib">
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="images/logo.jpg" />
+        </a>
+        <ul class="options">
+          <li><a href="#home" class="active" href="javascript:void(0)"><i class="fas fa-home"
+                style="display: inline; margin: 8px 3px auto; "></i>Home</a>
+          </li>
+          <li><a href="#about" href="javascript:void(0)"><i class="fas fa-pen"
+                style="display: inline; margin: 8px 3px auto;"></i>My Projects</a></li>
+          <img src="images/brave.png" class="user-pic" style="margin-right: 40px;">
+        </ul>
+      </nav>
     </div>
-    <section class="homepage">
-        <div class="left">
-            <div style="margin-left: 50px; padding:10px;" class="container">
-                <h1>Search projects efficiently</h1>
-                <div class="techsearch">
-                    <div class="row" >
-                        <div class="data-col-md-8" style= "width:350px; margin-right: 10px;">
-                            <input class="prompt" id="xyz" type="text" placeholder="Search countries..." style="width: 90px;">
-                        </div>
-                        <div class="col-md-4">
-                            <a onclick="btn_handler()" class="button btn btn-secondary">Search Projects</a>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <!-- <div class="search">
-                <h2>Project Technology Stack</h2>
-                <div class="select-box">
-                    <div class="options-container">
-                        <div class="option">
-                            <input type="radio" class="radio" id="html name="category" />
-                            <label for="html">HTML</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="css" name="category" />
-                            <label for="css">CSS</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="js" name="category" />
-                            <label for="js">Javascript</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="react" name="category" />
-                            <label for="react">React</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="mongo" name="category" />
-                            <label for="mongo">MongoDB</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="blockchain" name="category" />
-                            <label for="blockchain">Blockchain</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="dl" name="category" />
-                            <label for="dl">Deep Learning</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="ml" name="category" />
-                            <label for="ml">Machine Learning</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="iot" name="category" />
-                            <label for="iot">IoT</label>
-                        </div>
-
-                        <div class="option">
-                            <input type="radio" class="radio" id="ai" name="category" />
-                            <label for="iot">AI</label>
-                        </div>
-                    </div>
-
-                     <div class="selected">
-                         Select the technology
-                     </div>
-
-                     <div class="search-box">
-                        <input type="text" placeholder="Start Typing..." />
-                     </div>
-                </div>
-            </div> -->
-
-        </div>
-        </div>
-        </div>
-        <div class="right">
+  </section>
+  <div class="homedata">
+    <div class="col-1">
+      <h1>Platform to showcase your projects</h1>
+      <p><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse temporibus voluptatem laboriosam
+          asperiores voluptatum nesciunt ipsa dolorem natus non ducimus.</i></p>
+      <a class="expbutton" href="form.html">Upload a Project</a>
+    </div>
+    <div class="col-2">
+      <img src="images/backg2.png">
+    </div>
+  </div>
+  <section class="homepage">
+    <div class="projects-div">
+      <div class="project-content">
+        <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ctyyicne.json"
+                    background="transparent" speed="1" style="width: 200px; height: 100px;" loop autoplay>
+                </lottie-player> -->
+        <h1>Search any project in an efficient way</h1>
+      </div>
+      <div class="dropdown">
+        <select name="technologies" id="technologies" multiple>
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">Javascript</option>
+          <option value="4">React</option>
+          <option value="5">Node JS</option>
+          <option value="6">Flutter</option>
+          <option value="7">Dart</option>
+          <option value="8">Deep Learning</option>
+          <option value="9">IoT</option>
+          <option value="10">Python</option>
+          <option value="11">HTML</option>
+          <option value="12">CSS</option>
+          <option value="13">Javascript</option>
+          <option value="14">React</option>
+          <option value="15">Node JS</option>
+          <option value="16">Flutter</option>
+          <option value="17">Dart</option>
+          <option value="18">Deep Learning</option>
+          <option value="19">IoT</option>
+          <option value="20">Python</option>
+        </select>
+      </div>
+      <div class="container">
+        <div class="border-div">
+          <div class="cards grid-row">
             <div class="card">
-                <div class="float-layout">
-                    <div class="pro-img">
-                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
-                        <div class="project">
-                            <div class="project-title">Project title</div>
-                            <div class="project-desc">Project Contributor's name and a small description about project.
-                            </div>
-                            <div class="col-md-4">
-                                <a href="info.html" class="btn btn-warning">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="float-layout">
-                    <div class="pro-img">
-                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
-                        <div class="project">
-                            <div class="project-title">Project title</div>
-                            <div class="project-desc">Project Contributor's name and a small description about project.
-                            </div>
-                            <div class="col-md-4">
-                                <a href="info.html" class="btn btn-warning">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="float-layout">
-                    <div class="pro-img">
-                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
-                        <div class="project">
-                            <div class="project-title">Project title</div>
-                            <div class="project-desc">Project Contributor's name and a small description about project.
-                            </div>
-                            <div class="col-md-4">
-                                <a href="info.html" class="btn btn-warning">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="float-layout">
-                    <div class="pro-img">
-                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
-                        <div class="project">
-                            <div class="project-title">Project title</div>
-                            <div class="project-desc">Project Contributor's name and a small description about project.
-                            </div>
-                            <div class="col-md-4">
-                                <a href="info.html" class="btn btn-warning">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="float-layout">
-                    <div class="pro-img">
-                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
-                        <div class="project">
-                            <div class="project-title">Project title</div>
-                            <div class="project-desc">Project Contributor's name and a small description about project.
-                            </div>
-                            <div class="col-md-4">
-                                <a href="info.html" class="btn btn-warning" >View Project</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            
-            <div class="pages">
-                <ul class="pagination pagination-lg">
-                  <li><a href="#">1</a></li>
-                  <li class="active"><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                </ul>
+              <div class="card-top">
+                <img src="images/1_poster.png" alt="Project logo">
               </div>
-            <!-- <div class="card">
-                <div class="float-layout">
-                    <div class="pro-img">
-                        <img class="pro-image" src="images/1_poster.png" alt="Project Poster">
-                        <div class="project">
-                            <div class="project-title">Project title</div>
-                            <div class="project-desc">Project Contributor's name and a small description about project.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div> -->
+              <div class="card-info">
+                <h2>Onetrack</h2>
+                <span class="date">Monday, Jan 20, 2021</span>
+                <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore hic tenetur ut
+                  numquam quos deleniti molestiae quibusdam ad molestias necessitatibus?</p>
+              </div>
+              <div class="card-bottom flex-row">
+                <!-- <a href="#" class="read-more">View Project</a> -->
+                <a href="#" class="button btn-sky">View Project</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="images/1_poster.png" alt="Project logo">
+              </div>
+              <div class="card-info">
+                <h2>Onetrack</h2>
+                <span class="date">Monday, Jan 20, 2021</span>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perferendis libero
+                  et voluptatum asperiores voluptatem fugiat debitis ipsum amet dicta.</p>
+              </div>
+              <div class="card-bottom flex-row">
+                <!-- <a href="#" class="read-more">View Project</a> -->
+                <a href="#" class="button btn-sky">View Project</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="images/1_poster.png" alt="Project logo">
+              </div>
+              <div class="card-info">
+                <h2>Onetrack</h2>
+                <span class="date">Monday, Jan 20, 2021</span>
+                <p class="details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad veniam dignissimos
+                  dolores obcaecati sed hic eveniet dolorum ipsa. Tempore, rerum!</p>
+              </div>
+              <div class="card-bottom flex-row">
+                <!-- <a href="#" class="read-more">View Project</a> -->
+                <a href="#" class="button btn-sky">View Project</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="images/1_poster.png" alt="Project logo">
+              </div>
+              <div class="card-info">
+                <h2>Onetrack</h2>
+                <span class="date">Monday, Jan 20, 2021</span>
+                <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis voluptatibus
+                  inventore magni in facilis magnam explicabo expedita, velit nisi! Quos!</p>
+              </div>
+              <div class="card-bottom flex-row">
+                <!-- <a href="#" class="read-more">View Project</a> -->
+                <a href="#" class="button btn-sky">View Project</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="images/1_poster.png" alt="Project logo">
+              </div>
+              <div class="card-info">
+                <h2>Onetrack</h2>
+                <span class="date">Monday, Jan 20, 2021</span>
+                <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vero, mollitia
+                  recusandae error quia ut facere temporibus exercitationem quos accusamus.</p>
+              </div>
+              <div class="card-bottom flex-row">
+                <!-- <a href="#" class="read-more">View Project</a> -->
+                <a href="#" class="button btn-sky">View Project</a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section> 
+      </div>
+    </div>
 
-    <script src="index.js"></script>
-    <script>
-        var content = [
-            {id: 0, text: "HTML"},
-            {id: 1, text: "CSS"},
-            {id: 2, text: "Javascript"},
-            {id: 3, text: "React"},
-            {id: 4, text: "Flutter"},
-            {id: 5, text: "Deep Learning"},
-            {id: 6, text: "Machine Learning"},
-            {id: 7, text: "Blockchain"},
-            {id: 8, text: "IoT"},
+  </section>
+  <script src="index.js"></script>
+  <script src="multi-select-tag.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script> -->
+  <script>
+    new MultiSelectTag('technologies')  // id
+  </script>
 
-        ];
-    
-    
-         $(".prompt").select2({
-             data:content,
-             // minimumInputLength: 2,
-             width: '100%',
-             multiple:true,
-             placeholder:"Enter Technology Name",
-             // templateResult:formatState
-    
-         });
-    
-    
-    
-        // function btn_handler() {
-        //     var names = $('.prompt').select2('data');
-            
-        //     for(let name of names){
-                
-        //         console.log(name)
-        //         console.log(name.text)
-        //         console.log(name.email)
-                
-        //         alert(`${name.text} - ${name.email}`)
-    
-        //     }
-        // }
-    
-    </script>
-    
 
 </body>
 

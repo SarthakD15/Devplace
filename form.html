@@ -4,7 +4,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="form-multiselect.css">
     <title>Project Upload Form</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/7951bd2be7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script> -->
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
 </head>
@@ -42,8 +56,8 @@
             <div class="form">
                 <div class="step-one" id="formStepOne">
                     <h3>Project details</h3>
-                    <input type="text" placeholder="Project Title" id="fname" required="required">
-                    <input type="text" placeholder="Project Objective" id="fname" required>
+                    <input type="text" placeholder="Project Title" id="fname" name="title" required="required">
+                    <input type="text" placeholder="Project Objective" id="fname" name="obj" required>
                     <label for="myfile" style="margin-right: 63px">Project description/ppt/report </label>
                     <input type="file" id="myfile" class="upload-box" name="myfile"><br>
                     <label for="myfile" style="margin-right: 10px">Upload logo or poster of your project</label>
@@ -62,9 +76,34 @@
 
                 <div class="step-three" id="formStepThree">
                     <!-- <input type="text" placeholder="Technology Stack Used" id="techstack"> -->
+                    <div class="stackupload">
+                        <h4 for="stackupload">Choose technologies you used</h4>
+                    <select name="technologies" id="technologies" multiple>
+                        <option value="1">HTML</option>
+                        <option value="2">CSS</option>
+                        <option value="3">Javascript</option>
+                        <option value="4">React</option>
+                        <option value="5">Node JS</option>
+                        <option value="6">Flutter</option>
+                        <option value="7">Dart</option>
+                        <option value="8">Deep Learning</option>
+                        <option value="9">IoT</option>
+                        <option value="10">Python</option>
+                        <option value="11">HTML</option>
+                        <option value="12">CSS</option>
+                        <option value="13">Javascript</option>
+                        <option value="14">React</option>
+                        <option value="15">Node JS</option>
+                        <option value="16">Flutter</option>
+                        <option value="17">Dart</option>
+                        <option value="18">Deep Learning</option>
+                        <option value="19">IoT</option>
+                        <option value="20">Python</option>
+                    </select>
+                </div>
                     <label for="myfile" style="margin-right: 10px">Some glimpses of your application</label>
                     <input type="file" id="myfile" class="upload-box" name="myfile" multiple><br>
-                    <label for="myfile" style="margin-right: 50px">Video demo (if any)</label>
+                    <label for="myfile" style="margin-right: 115px">Video demo (if any)</label>
                     <input type="file" id="myfile" class="upload-box" name="myfile"><br>
                     <input type="text" placeholder="Project Repository link (Github)" id="repolink">
                     <div class="flex-input">
@@ -72,6 +111,7 @@
                         <label for="myfile" style="margin-left: 50px">App apk</label>
                         <input type="file" id="myfile" class="upload-box" name="myfile"><br>
                     </div>
+
                 </div>
                 <!-- <div class="step-four" id="formStepFour">
 
@@ -133,45 +173,13 @@
 
     
     <script src="form.js"></script>
-    <script src="index.js"></script>
+    <script src="multi-select-tag.js"></script>
     <script>
-        var content = [
-            {id: 0, text: "HTML"},
-            {id: 1, text: "CSS"},
-            {id: 2, text: "Javascript"},
-            {id: 3, text: "React"},
-            {id: 4, text: "Flutter"},
-
-        ];
-    
-    
-         $(".prompt").select2({
-             data:content,
-             // minimumInputLength: 2,
-             width: '100%',
-             multiple:true,
-             placeholder:"Enter Technology Name",
-             // templateResult:formatState
-    
-         });
-    
-    
-    
-        // function btn_handler() {
-        //     var names = $('.prompt').select2('data');
-            
-        //     for(let name of names){
-                
-        //         console.log(name)
-        //         console.log(name.text)
-        //         console.log(name.email)
-                
-        //         alert(`${name.text} - ${name.email}`)
-    
-        //     }
-        // }
-    
+        new MultiSelectTag('technologies')  // id
     </script>
+    
+    
+    
 
 </body>
 </html>
