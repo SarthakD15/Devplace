@@ -65,7 +65,7 @@ function MultiSelectTag(e, t = { shadow: !1, rounded: !0 }) {
         l.appendChild(a), 
         l.appendChild(p), 
         n.nextSibling ? n.parentNode.insertBefore(l, n.nextSibling) : n.parentNode.appendChild(l) 
-    }(), h(), L(), E(), u.addEventListener("click", (() => { p.classList.contains("hidden") && (h(), L(), p.classList.remove("hidden"), r.focus()) })), 
+    }(), h(), L(), E(), l.addEventListener("click", (() => { p.classList.contains("hidden") && (h(), L(), p.classList.remove("hidden"), r.focus()) })), 
     r.addEventListener("keyup", (e => { h(e.target.value), L() })), 
     r.addEventListener("keydown", (e => { if ("Backspace" === e.key && !e.target.value && o.childElementCount > 1) { const e = i.children[o.childElementCount - 2].firstChild; d.find((t => t.value == e.dataset.value)).selected = !1, g(e.dataset.value), E() } })), 
     window.addEventListener("click", (e => { l.contains(e.target) || p.classList.add("hidden") })) 

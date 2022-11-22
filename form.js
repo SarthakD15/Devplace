@@ -30,7 +30,11 @@ var prevBtn = document.getElementById("prev"),
     phoneText = document.getElementById("phoneText")
 
 var step = 1
+// document.getElementById("nextBtn").required = true;
+function myFunction(){
+document.getElementById("next").required = true;
 
+}
 nextBtn.addEventListener("click",()=>{
 
     if(step === 1){
@@ -43,7 +47,7 @@ nextBtn.addEventListener("click",()=>{
         formStepOne.style.display = "none"
         formStepTwo.style.display = "block"
         nextBtn.innerText = "Next"
-        step++
+        step++;
     }
     else if(step === 2){
         progressBar.style.width = "75%"

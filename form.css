@@ -123,7 +123,7 @@ nav img{
   margin-left: 13%;
 
 }
-.main .container .form{
+.main .container form{
 
   width: 83%;
   height: 60%;
@@ -135,10 +135,10 @@ nav img{
   padding: 1%;
 
 }
-.main .container .form .step-one label{
+.main .container form .step-one label{
   height: 50px;
 }
-.container .form .upload-box{
+.container form .upload-box{
   font-size:15px;
   background: white;
   border-radius: 20px;
@@ -161,13 +161,13 @@ nav img{
   background-color: rgb(99,179,152);
 }
 
-.main .container .form .step-one{
+.main .container form .step-one{
 
   width: 100%;
 
 }
 
-.main .container .form .step-three .flex-input{
+.main .container form .step-three .flex-input{
 
   width: 100%;
   height: 18%;
@@ -177,7 +177,7 @@ nav img{
 
 }
 
-.main .container .form .step-three .flex-input #weblink{
+.main .container form .step-three .flex-input #weblink{
 
   width: 49%;
   height: 15%;
@@ -190,7 +190,7 @@ nav img{
 
 }
 
-.main .container .form .step-one #fname{
+.main .container form .step-one #title, #obj{
 
   width: 100%;
   height: 13%;
@@ -204,13 +204,13 @@ nav img{
 }
 
 
-.main .container .form .step-two{
+.main .container form .step-two{
 
   width: 100%;
   display: none;
 }
 
-.main .container .form .step-two input{
+.main .container form .step-two input{
 
   width: 100%;
   height: 13%;
@@ -224,7 +224,7 @@ nav img{
 }
 
 
-.main .container .form .step-three{
+.main .container form .step-three{
 
   width: 100%;
   display: none;
@@ -244,7 +244,7 @@ nav img{
 
 } */
 
-.main .container .form .step-three #repolink{
+.main .container form .step-three #repolink{
 
   width: 100%;
   height: 13%;

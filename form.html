@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,6 +23,7 @@
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -42,7 +44,7 @@
 
             <div class="header-bar"></div>
 
-            <div class="progress-form" >
+            <div class="progress-form">
                 <div class="numbers">
                     <p class="setp-number" id="step_one">1</p>
                     <p class="setp-number" id="step_two">2</p>
@@ -53,17 +55,24 @@
 
             </div>
 
-            <div class="form">
+            <!-- <div class="form"> -->
+            <form action="#" method="POST" enctype="multipart/form-data" >
                 <div class="step-one" id="formStepOne">
                     <h3>Project details</h3>
-                    <input type="text" placeholder="Project Title" id="fname" name="title" required="required">
-                    <input type="text" placeholder="Project Objective" id="fname" name="obj" required>
+                    <input type="text" placeholder="Project Title" id="title" name="title" required>
+                    <input type="text" placeholder="Project Objective" id="obj" name="obj" required>
                     <label for="myfile" style="margin-right: 63px">Project description/ppt/report </label>
-                    <input type="file" id="myfile" class="upload-box" name="myfile"><br>
+                    <input type="file" id="myfile" class="upload-box" name="myfile" required><br>
                     <label for="myfile" style="margin-right: 10px">Upload logo or poster of your project</label>
-                    <input type="file" id="myfile" class="upload-box" name="myfile">
+                    <input type="file" id="myfile" class="upload-box" name="myfile" required>
                     <!-- <input type="text" placeholder="Email" id="email">
                     <input type="text" placeholder="confirm Email"> -->
+
+                    <!-- <div class="buttons" id="buttonsCTN">
+                        <button id="prev" type="submit">Previous</button>
+                        <button id="next" type="submit">Next</button>
+                    </div> -->
+
                 </div>
 
                 <div class="step-two" id="formStepTwo">
@@ -72,35 +81,40 @@
                     <input type="text" placeholder="Github Profile Link" id="socialink">
                     <input type="text" placeholder="LinkedIn Profile Link" id="socialink">
                     <input type="text" placeholder="Your Project Guide / Mentor Name (if any)" id="gname">
+
+                    <!-- <div class="buttons" id="buttonsCTN">
+                        <button id="prev" type="submit">Previous</button>
+                        <button id="next" type="submit" onclick="myfunction()">Next</button>
+                    </div> -->
                 </div>
 
                 <div class="step-three" id="formStepThree">
                     <!-- <input type="text" placeholder="Technology Stack Used" id="techstack"> -->
                     <div class="stackupload">
                         <h4 for="stackupload">Choose technologies you used</h4>
-                    <select name="technologies" id="technologies" multiple>
-                        <option value="1">HTML</option>
-                        <option value="2">CSS</option>
-                        <option value="3">Javascript</option>
-                        <option value="4">React</option>
-                        <option value="5">Node JS</option>
-                        <option value="6">Flutter</option>
-                        <option value="7">Dart</option>
-                        <option value="8">Deep Learning</option>
-                        <option value="9">IoT</option>
-                        <option value="10">Python</option>
-                        <option value="11">HTML</option>
-                        <option value="12">CSS</option>
-                        <option value="13">Javascript</option>
-                        <option value="14">React</option>
-                        <option value="15">Node JS</option>
-                        <option value="16">Flutter</option>
-                        <option value="17">Dart</option>
-                        <option value="18">Deep Learning</option>
-                        <option value="19">IoT</option>
-                        <option value="20">Python</option>
-                    </select>
-                </div>
+                        <select name="technologies" id="technologies" multiple>
+                            <option value="1">HTML</option>
+                            <option value="2">CSS</option>
+                            <option value="3">Javascript</option>
+                            <option value="4">React</option>
+                            <option value="5">Node JS</option>
+                            <option value="6">Flutter</option>
+                            <option value="7">Dart</option>
+                            <option value="8">Deep Learning</option>
+                            <option value="9">IoT</option>
+                            <option value="10">Python</option>
+                            <option value="11">HTML</option>
+                            <option value="12">CSS</option>
+                            <option value="13">Javascript</option>
+                            <option value="14">React</option>
+                            <option value="15">Node JS</option>
+                            <option value="16">Flutter</option>
+                            <option value="17">Dart</option>
+                            <option value="18">Deep Learning</option>
+                            <option value="19">IoT</option>
+                            <option value="20">Python</option>
+                        </select>
+                    </div>
                     <label for="myfile" style="margin-right: 10px">Some glimpses of your application</label>
                     <input type="file" id="myfile" class="upload-box" name="myfile" multiple><br>
                     <label for="myfile" style="margin-right: 115px">Video demo (if any)</label>
@@ -112,6 +126,10 @@
                         <input type="file" id="myfile" class="upload-box" name="myfile"><br>
                     </div>
 
+                    <!-- <div class="buttons" id="buttonsCTN">
+                        <button id="prev" type="submit">Previous</button>
+                        <button id="next" type="submit" onclick="myfunction()">Next</button>
+                    </div> -->
                 </div>
                 <!-- <div class="step-four" id="formStepFour">
 
@@ -159,29 +177,36 @@
 
                 </div> -->
 
-            </div>
+                <!-- </div> -->
+                <!-- <div class="buttons" id="buttonsCTN">
+                    <button id="prev" type="submit">Previous</button>
+                    <button id="next" type="submit" onclick="myfunction()">Next</button>
+                </div> -->
+            </form>
 
             <div class="buttons" id="buttonsCTN">
-                <button id="prev">Previous</button>
-                <button id="next">Next</button>
+                <button id="prev" type="submit">Previous</button>
+                <button id="next" type="submit" onclick="myfunction()">Next</button>
             </div>
-            
+
         </div>
+        
 
 
     </div>
 
-    
+
     <script src="form.js"></script>
     <script src="multi-select-tag.js"></script>
     <script>
         new MultiSelectTag('technologies')  // id
     </script>
-    
-    
-    
+
+
+
 
 </body>
+
 </html>
 
 
